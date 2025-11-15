@@ -212,7 +212,7 @@ int main(int argc, char *argv[]){
 
   glUseProgram(shaderProgram); //Set the active shader (only one can be used at a time)
 
-  glEnable(GL_DEPTH_TEST);  
+  // glEnable(GL_DEPTH_TEST);  
 
   //Event Loop (Loop forever processing each event as fast as possible)
   SDL_Event windowEvent;
@@ -227,10 +227,7 @@ int main(int argc, char *argv[]){
       if (windowEvent.type == SDL_KEYUP && windowEvent.key.keysym.sym == SDLK_ESCAPE) 
         quit = true;  //Exit event loop
 
-          //   exit with q 
-      if (windowEvent.type == SDL_KEYUP && windowEvent.key.keysym.sym == SDLK_q) 
-        quit = true;  //Exit event loop
-        
+
       if (windowEvent.type == SDL_KEYUP && windowEvent.key.keysym.sym == SDLK_f) //If "f" is pressed
         fullscreen = !fullscreen;
       SDL_SetWindowFullscreen(window, fullscreen ? SDL_WINDOW_FULLSCREEN : 0); //Set to full screen 

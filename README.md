@@ -9,9 +9,12 @@ A simple 2D colored triangle demonstrating basic OpenGL rendering. The triangle 
   <img src="SDL2_Version/results/tri.png" width="560">
 </p>
 
-g++ -std=c++11 TriangleColored.cpp glad/glad.c -o TriangleColored \
+g++ -std=c++11 -Wno-deprecated TriangleColored.cpp glad/glad.c -o TriangleColored \
     -I./include -I/opt/homebrew/include -L/opt/homebrew/lib \
     -lSDL2 -framework OpenGL
+
+Used -Wno-deprecated to avoid unnecessary warnings [1].
+[1] https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html
 
 ### 2. Cube3D.cpp
 A rotating 3D cube with different colored faces demonstrating 3D transformations. 

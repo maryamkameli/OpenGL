@@ -52,7 +52,7 @@ const GLchar* vertexSource =
     "   vec4 norm4 = transpose(inverse(model)) * vec4(inNormal,1.0);"
     "   normal = normalize(norm4.xyz);"
     "}";
-    
+     
 const GLchar* fragmentSource =
     "#version 150 core\n"
     "in vec3 Color;"
